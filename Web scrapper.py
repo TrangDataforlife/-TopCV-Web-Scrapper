@@ -27,7 +27,6 @@ def main():
             if href and href.startswith('https://www.topcv.vn/'):
                 link_list.append(href)
                 
-        # Loại bỏ link trùng lặp
         link_list = list(set(link_list))
         print(f"Tìm thấy {len(link_list)} công việc hợp lệ.")
 
@@ -74,7 +73,6 @@ def main():
         company_name_el = new_soup.find('a', class_='name')
         company_name = company_name_el.text.strip() if company_name_el else ''
 
-        # Khởi tạo Dictionary thông tin
         job_info = {
             'job_title': job_title,
             'company_name': company_name,
@@ -84,7 +82,6 @@ def main():
             'deadline': ''
         }
 
-        # Bổ sung thông tin chi tiết
         for item in new_soup.find_all('div', class_='list-info__content'):
             title_el = item.find('div', class_='list-info__content__title')
             desc_el = item.find('div', class_='list-info__content__desc')
@@ -100,8 +97,6 @@ def main():
                 job_info['deadline'] = desc
 
         data.append(job_info)
-        
-        # Delay ngẫu nhiên giữa các trang
         time.sleep(random.uniform(3, 6))
 
     # 4. Xuất dữ liệu ra JSON và CSV
@@ -119,7 +114,6 @@ def main():
             'deadline': 'Hạn ứng tuyển'
         })
         df_renamed.to_csv('topcv_jobs_pandas.csv', index=False, encoding='utf-8-sig')
-        
         print("\n✅ Đã hoàn thành cào dữ liệu và xuất file thành công!")
     else:
         print("\n⚠️ Không có dữ liệu nào được thu thập.")
