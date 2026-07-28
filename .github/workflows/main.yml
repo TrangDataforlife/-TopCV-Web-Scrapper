@@ -31,7 +31,7 @@ jobs:
 
     # 4. Chạy script cào dữ liệu
     - name: Run Scraper
-      run: python "[TopCV] Web scrapper.py"
+      run: python "Web scrapper.py"
 
     # 5. Commit và Push kết quả file CSV (topcv_jobs_pandas.csv) ngược lại Repository
     - name: Commit and push updated data
