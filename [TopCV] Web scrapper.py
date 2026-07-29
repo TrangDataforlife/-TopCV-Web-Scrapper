@@ -22,7 +22,7 @@ HEADERS = {
 }
 
 # --- 4. THU THẬP DANH SÁCH LINK TỪ TRANG CHÍNH ---
-page = requests.get(base_url, headers=HEADERS)
+page = requests.get(base_url, headers=HEADERS, impersonate="chrome124", timeout=15)
 
 # 1. Kiểm tra xem request có thành công không (200 OK)
 if page.status_code != 200:
