@@ -16,6 +16,10 @@ HEADERS = {
         " (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
     ),
     "Accepted-Language": "vi-VN,vi;q=0.9,en-US;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Referer": "https://www.topcv.vn/",
+    "Connection": "keep-alive",
+}
 }
 
 # --- 4. THU THẬP DANH SÁCH LINK TỪ TRANG CHÍNH ---
