@@ -26,7 +26,7 @@ page = requests.get(base_url, headers=HEADERS)
 
 # 1. Kiểm tra xem request có thành công không (200 OK)
 if page.status_code != 200:
-    print(f"❌ LỖI: TopCV chặn request! Status Code: {response.status_code}")
+    print(f"❌ LỖI: TopCV chặn request! Status Code: {page.status_code}")
     # Ép Python dừng chương trình ngay lập tức với lỗi (Exit Code = 1)
     sys.exit(1)
 
