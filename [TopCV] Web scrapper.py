@@ -95,5 +95,8 @@ for link in link_list:
     # Nghỉ 1 lần ngắn sau mỗi link thay vì nghỉ nhiều lần rải rác
     time.sleep(random.uniform(3, 7))
 
-with open("topcv.md", "w", encoding="utf-8") as job_file:
-    job_file.write(pd.DataFrame(data).to_markdown(index=False))
+
+# Chuyển list data thành DataFrame
+df = pd.DataFrame(data)
+# Lưu trực tiếp ra file CSV
+df.to_csv("topcv.csv", index=False, encoding="utf-8-sig")
