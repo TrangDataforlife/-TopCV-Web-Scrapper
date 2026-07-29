@@ -4,7 +4,7 @@ import sys
 import time
 # --- 2. IMPORT CÁC THƯ VIỆN ---
 import pandas as pd
-import requests
+from curl_cffi import requests  # Thay thế requests mặc định bằng curl_cffi
 from bs4 import BeautifulSoup
 
 # --- 3. CẤU HÌNH BAN ĐẦU ---
