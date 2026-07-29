@@ -20,7 +20,6 @@ HEADERS = {
     "Referer": "https://www.topcv.vn/",
     "Connection": "keep-alive",
 }
-}
 
 # --- 4. THU THẬP DANH SÁCH LINK TỪ TRANG CHÍNH ---
 page = requests.get(base_url, headers=HEADERS)
