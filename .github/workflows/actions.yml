@@ -1,6 +1,7 @@
 name: Run web scrapper
 
 on:
+  workflow_dispatch: # Cho phép kích hoạt thủ công từ giao diện GitHub Actions
   schedule: 
     - cron: '0 */2 * * *'  
 
@@ -29,8 +30,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update topcv.md"
-          file_pattern: "topcv.md"
-        id: auto-commit-action
 
       - name: Send Email
         if : steps.auto-commit-action.outputs.committed == 'true'
