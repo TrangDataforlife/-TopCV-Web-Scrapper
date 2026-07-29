@@ -91,8 +91,5 @@ for link in link_list:
     # Nghỉ 1 lần ngắn sau mỗi link thay vì nghỉ nhiều lần rải rác
     time.sleep(random.uniform(3, 7))
 
-# In dữ liệu dạng dễ nhìn (Pretty Print)
-print(json.dumps(data, ensure_ascii=False, indent=4))
-
 with open("topcv.md", "w", encoding="utf-8") as job_file:
     job_file.write(pd.DataFrame(data).to_markdown(index=False))
