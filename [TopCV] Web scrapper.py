@@ -2,12 +2,6 @@ import random
 import subprocess
 import sys
 import time
-
-# --- 1. CÀI ĐẶT CÁC THƯ VIỆN CẦN THIẾT ---
-subprocess.run([sys.executable, "-m", "pip", "install", "bs4"])
-subprocess.run([sys.executable, "-m", "pip", "install", "lxml"])
-subprocess.run([sys.executable, "-m", "pip", "install", "html5lib"])
-
 # --- 2. IMPORT CÁC THƯ VIỆN ---
 import pandas as pd
 import requests
