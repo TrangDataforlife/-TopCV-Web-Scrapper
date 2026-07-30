@@ -2,9 +2,7 @@ name: Run web scrapper
 
 on:
   workflow_dispatch: # Cho phép kích hoạt thủ công từ giao diện GitHub Actions
-  schedule: 
-    - cron: '0 */2 * * *'  
-
+  
 jobs:
   run-scrapper:
     runs-on: ubuntu-latest
